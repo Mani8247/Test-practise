@@ -5,3 +5,4 @@ for i in num:
     if i.isdigit():
         c += 1
 print(f"the number of digits in the given number is",c)
+
