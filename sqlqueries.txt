@@ -1,0 +1,57 @@
+Assignment-1
+
+1).Write a query to display all the records from the STUDENT table?
+    select * from student;
+
+2).Write a query to display only name and date of birth columns from the table STUDENT?
+    select stdname,dob from student;
+
+3).Write a query to display all students' records where the percentage of students is greater or equal to 80?
+    select stdid,stdname from student where percentage >= 80;
+
+4).Write a query to display student name, stream and percentage where the percentage of students is more than 80.?
+    select stdname,stream,percentage from student where percentage > 80;
+
+5).Write a query to display all records of science students whose percentage is more than 75?
+    select stdname from student where stream = "science" and percentage >= 75;
+
+6).Write a query to display the name of all students whose stream is not Science?
+    select stdname from student where stream <> "science";
+
+7).Write a query to display all student names and their percentages where the percentage of students is between 60 and 80?
+    select stdname,percentage from student where percentage between 60 and 80;
+
+8).Write a query to change a student name from SWATI MISHRA to SWATI VERMA whose StdID is 1014 and also change percentage 86?
+    update student set stdname = "Swati Verma",percentage = 86 where stdid = 1014;
+
+9).Write a query to delete the records from the student table where StdId is 1016?
+    delete from student where stdid = 1016;
+
+10).Write a query to print all records from the student table where the student name starts with ‘S?
+    select * from student where stdname like "s%";
+
+11).Write a query to print all records from the student table where the student name contains the alphabet ‘G’?
+    select * from student where stdname like "%g%";
+
+Assignment-2
+
+1).Write a query to display employee name and salary whose salary is greater than or equal to 2200?
+    select ename,sal from employees where sal > 2200;
+
+2).Write a query to display details of employees who are not getting commission?
+    select * from employees where comm = 'null';
+
+3).Write a query to display employee name and salary of those employees who don’t have their salary in the range of 2500 to 4000?
+    select ename,sal from employees where sal between 2500 and 4000;
+
+4).Write a query to display the name, job title and salary of employees whose job title is not a manager?
+    select ename,job,sal from employees where job <> 'manager';
+
+5).Write a query to display the name of an employee whose name contains “A” as the second alphabet?
+    select ename from employees where ename like "_a%";
+
+6).Write a query to display the name of an employee whose name contains “T” as the last alphabet?
+    select ename from employees where ename like "%t";
+
+7).Write a query to display the name of an employee whose name contains ”K” as First and “L” as third alphabet?
+    select ename from employees where ename like "k_l%";
